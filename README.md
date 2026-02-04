@@ -3,19 +3,29 @@
 **Alumno:** Gonzalez, Noel  
 **Fecha:** 2026-02-04  
 **Entorno:** Ubuntu Server + Docker  
-**Contenedores:** odoo-dev (CRM) | postgres-dev (BD)
+**Contenedores:** odoo-dev-UF1884 (CRM) | postgres-dev-2 (BD)
 
 ---
 
 ## 1. Análisis inicial del sistema y parámetros de rendimiento
 ### 1.1 Servicios de acceso al CRM
-- Descripción:
+- Descripción: 
+ - Acceso al ERP/CRM (aplicacion web): contenedor odoo
+ - El servicio de base de datos: contenedor postgres-dev-2 (PostgrSQL 16)
+ - Servicio de publicación de puerto / acceso web: Docker publica 8069/tcp
+ - Red y DNS del sistema: interfaz la IP 192.168.1.130
+ - Acceso administrativo remoto: SSH en 22/tcp para tareas de soporte.  
 - Evidencias: evidencias/01_analisis/
 
 ### 1.2 Parámetros (CPU / RAM / Disco / Red) y relación con CRM+BD
-- Conclusiones:
+- CPU ~ 97,7 idle, load average: 0.07, 0.05, 0.74
+- Conclusiones: No hay saturación de CPU.
 
----
+- RAM 10Gi total;       1.0Gi usado;       8.7Gi libre
+- Conclusiones: Hay suficiente memoria, no hay presión ahora mismo en la RAM.
+
+- Disco: /dev/sda2   tamaño:254G usado: 9.7G  (5%)
+- Conclusiones: Hay suficiente espacio de memoria, no hay problemas de almacenamiento.
 
 ## 2. Monitorización de procesos y detección de sobrecarga
 ### 2.1 Proceso problemático detectado
