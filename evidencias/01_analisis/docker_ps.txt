@@ -1,0 +1,7 @@
+CONTAINER ID   IMAGE                COMMAND                  CREATED       STATUS                PORTS                                                        NAMES
+f0a5f5f2cb82   odoo:18.0            "/entrypoint.sh odoo"    12 days ago   Up 6 days (healthy)   8071-8072/tcp, 0.0.0.0:8070->8069/tcp, [::]:8070->8069/tcp   odoo-qa
+c3439598fe51   odoo:18.0            "/entrypoint.sh odoo"    12 days ago   Up 6 days (healthy)   8071-8072/tcp, 0.0.0.0:8071->8069/tcp, [::]:8071->8069/tcp   odoo-prod
+8f0f59fa5336   odoo:18.0            "/entrypoint.sh odoo"    12 days ago   Up 6 days (healthy)   0.0.0.0:8069->8069/tcp, [::]:8069->8069/tcp, 8071-8072/tcp   odoo-dev-UF1884
+cd81f8867418   postgres:16-alpine   "docker-entrypoint.s…"   12 days ago   Up 6 days (healthy)   0.0.0.0:5432->5432/tcp, [::]:5432->5432/tcp                  postgres-dev-2
+65794ae87dbf   postgres:16-alpine   "docker-entrypoint.s…"   12 days ago   Up 6 days (healthy)   5432/tcp                                                     postgres-prod
+44d0666dad88   postgres:16-alpine   "docker-entrypoint.s…"   12 days ago   Up 6 days (healthy)   5432/tcp                                                     postgres-qa
