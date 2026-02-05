@@ -59,7 +59,7 @@
   sudo docker ps
   ```
 ### 3.5 Rollback
-- Esta situación consiste en arrancar el contenedor como se indica en la acción ap
+- Esta situación consiste en arrancar el contenedor como se indica en la acción anterior.
 ---
 
 ## 4. Simulación de saturación del sistema (CPU o Memoria)
