@@ -43,11 +43,23 @@
 
 ## 3. Resolución de una incidencia técnica simulada
 ### 3.1 Síntomas
+- Los usuarios no pueden acceder al CRM.
+- La URL del servicio no responde.
 ### 3.2 Diagnóstico
+- Verificar el estado de los contenedores (docker ps)
+- El contenedor odoo-dev-UF1885 no se encuentra en ejecución. 
 ### 3.3 Acción aplicada
+- Se procede a reestablecer el servicio del contenedor, arrancando nuevamente.
+  ```
+  sudo docker start odoo-dev-UF1884
+  ```
 ### 3.4 Verificación
+- Verificamos el estado del contenedor.
+  ```
+  sudo docker ps
+  ```
 ### 3.5 Rollback
-
+- Esta situación consiste en arrancar el contenedor como se indica en la acción ap
 ---
 
 ## 4. Simulación de saturación del sistema (CPU o Memoria)
