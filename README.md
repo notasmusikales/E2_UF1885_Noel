@@ -30,9 +30,15 @@
 ## 2. Monitorización de procesos y detección de sobrecarga
 ### 2.1 Proceso problemático detectado
 - Proceso/servicio:
+ - Contenedor postgres-dev-2 (servicio PostgreSQL para ERP/CRM)
+ -Proceso interno forzado por el sistema: yes > /dev/null & (generador de carga del CPU) 
 - Datos y justificación:
+ - CPU % (postgres-dev-2): 20078%, indica saturación del docker.
+ - Consumo de memoria bajo (67.28MiB / 10.6GiB)
+ - Saturacion se produce a nivel del CPU.
 - Impacto en el CRM:
-
+ - Lentitud extrema en operaciones que dependen de la base de datos.
+ - Usuarios perciben bloqueos y esperas prolongadas.
 ---
 
 ## 3. Resolución de una incidencia técnica simulada

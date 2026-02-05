@@ -1,0 +1,7 @@
+CONTAINER ID   NAME              CPU %       MEM USAGE / LIMIT    MEM %     NET I/O           BLOCK I/O         PIDS
+f0a5f5f2cb82   odoo-qa           0.86%       124.6MiB / 10.6GiB   1.15%     827kB / 846kB     54.4MB / 0B       4
+c3439598fe51   odoo-prod         0.56%       112.5MiB / 4GiB      2.75%     825kB / 843kB     55.6MB / 0B       4
+8f0f59fa5336   odoo-dev-UF1884   0.77%       209.5MiB / 10.6GiB   1.93%     9.53MB / 12.5MB   58.2MB / 2.88MB   4
+cd81f8867418   postgres-dev-2    32420.06%   64.62MiB / 10.6GiB   0.60%     9.11MB / 9.43MB   37.3MB / 6.68MB   16
+65794ae87dbf   postgres-prod     0.12%       36.98MiB / 2GiB      1.81%     844kB / 822kB     18.5MB / 303kB    8
+44d0666dad88   postgres-qa       0.00%       31.12MiB / 10.6GiB   0.29%     848kB / 825kB     11MB / 303kB      8
