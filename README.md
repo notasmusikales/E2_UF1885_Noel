@@ -61,45 +61,17 @@
 ### 3.5 Rollback
 - Esta situación consiste en arrancar el contenedor como se indica en la acción anterior.
 ---
-
 ## 4. Simulación de saturación del sistema (CPU o Memoria)
-- Técnica utilizada:
-	-Simulación de saturación de la memoria RAM mediante la ejecución de procesos que consumen grandes bloques de memoria o mediante herramientas de prueba de estrés de memoria
+- Técnica utilizada: Simulación de saturación de la memoria RAM mediante la ejecución de procesos que consumen grandes bloques de memoria o mediante herramientas de prueba de estrés de memoria
 	 (por ejemplo, stress en Linux, Memory Load en Windows).
-- Datos capturados:
-	-Uso de memoria antes, durante y después de la prueba (MB o %).
-
-	-Uso de CPU (si se vio afectado por la saturación de RAM).
-
-	-Tiempo de respuesta de aplicaciones críticas.
-
-	-Eventos del sistema (logs de errores, advertencias, swap utilizado).
-- Análisis:
-	-Comparación del uso de memoria vs. memoria disponible.
-
-	-Identificación de cuellos de botella o procesos que provocan saturación.	
-
-	-Comportamiento del sistema ante falta de memoria (caídas, lentitud, swapping).
-- Verificación requisitos HW/SW:
-	-El sistema cuenta con 10gi de RAM y no tiene swap configuradda.
-
-	-Para entornos ERP/CRM con carga recurrente, esta configuración puede ser insuficiente
-	en picos de consumo de memoria.
-		- Aumentar memoria RAM disponible, o configurar swap como medida preventiva.
-
-- Registro:
-	-La simulacion se realizó de forma controlada y reversible sin perdida de datos.
-	-Fecha y hora de la prueba.
-
-	-Nombre del sistema y versión de SO.
-
-	-Herramienta o comando utilizado para saturar la memoria.
-
-	-Valores medidos: % RAM utilizada, % CPU, tiempo de respuesta de aplicaciones.
-
-	-Comportamiento observado: errores, bloqueos, lentitud.
-
-	-Acciones tomadas o recomendaciones.
+- Datos capturados: free -h -> antes y despues de la simulación vmstat 1 5 -> antes y despues de la simulación
+- Análisis: Antes de la simulación el sistema disponia de 4.5Gi de memoria libre. 
+ Tras la simulación, la memoria utilizada aumentó a 8.4Gi, el sistema no ha llegado a nivel crítico, 
+ pero si un escenario de riesgo.;
+- Verificación requisitos HW/SW: El sistema cuenta con 10 GiB RAM y no tiene swap configurada. 
+ Para entornos ERP/CRM con carga recurrente, esta configuración puede ser insuficiente en picos de consumo de memoria. 
+ Aumentar memoria RAM disponible, o configurar swap como medida preventiva
+- Registro: La simulación se realizó de forma controlada y reversible sin perdida de datos.
 
 ---
 
